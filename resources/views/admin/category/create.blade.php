@@ -5,7 +5,7 @@
         <div class="card-body">
             <form action="{{route('category.store')}}" method="post" class="form-horizontal form-material">
                 @csrf
-                @include('layouts.theme1._message')
+
                 <div class="form-group">
                     <label class="col-md-12">Category Name</label>
                     <div class="col-md-12">

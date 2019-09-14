@@ -15,7 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $data['title']='Category List';
+        $data['categories']=Category::orderBy('id','asc')->get();
+        $data['serial']=1;
+        return view('admin.category.index',$data);
     }
 
     /**
@@ -44,7 +47,7 @@ class CategoryController extends Controller
        $data['details']=$request->details;
        Category::create($data);
        Session::flash('message','Category Created Successfully');
-       return redirect()->route('category.create');
+       return redirect()->route('category.index');
     }
 
     /**
