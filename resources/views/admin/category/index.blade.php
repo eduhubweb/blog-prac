@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">{{$title}}</h4>
-                <h6 class="card-title m-t-40"><i class="m-r-5 font-18 mdi mdi-numeric-1-box-multiple-outline"></i> Table With Outside Padding</h6>
+
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -27,7 +27,7 @@
                                   <form method="post" action="{{route('category.destroy',$category->id)}}">
                                       @csrf
                                       @method('delete')
-                                      <button class="btn btn-danger text-white">Delete</button>
+                                      <button class="btn btn-danger text-white" onclick="return confirm('are you delete category')">Delete</button>
                                   </form>
                                </td>
                            </tr>
